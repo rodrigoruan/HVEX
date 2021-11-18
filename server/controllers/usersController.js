@@ -9,7 +9,8 @@ const login = async (req, res) => {
     return res.status(code).json({ error });
   }
 
-  res.status(200).json(response);
+  res.cookie('token', response, { maxAge: 10, httpOnly: true, secure: true });
+  res.status(200).json({ message: 'User logged successfully' });
 };
 
 const create = async (req, res) => {
