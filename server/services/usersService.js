@@ -24,7 +24,7 @@ const login = async (email, password) => {
 
   const token = jwt.sign({ data: { name, email } }, SECRET);
 
-  return token;
+  return { token, name };
 };
 
 const create = async (email, name, password) => {

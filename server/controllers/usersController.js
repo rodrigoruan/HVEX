@@ -2,6 +2,7 @@ const services = require('../services/usersService');
 
 const login = async (req, res) => {
   const { email, password } = req.body;
+
   const response = await services.login(email, password);
 
   if (response.error) {
@@ -9,12 +10,15 @@ const login = async (req, res) => {
     return res.status(code).json({ error });
   }
 
-  res.cookie('token', response, { maxAge: 10, httpOnly: true, secure: true });
-  res.status(200).json({ message: 'User logged successfully' });
+  const { token, name } = response;
+
+  res.cookie('token', token, { httpOnly: true, secure: true });
+  res.status(200).json({ message: 'Usuário logado com sucesso', name });
 };
 
 const create = async (req, res) => {
   const { email, name, password } = req.body;
+
   const response = await services.create(email, name, password);
 
   if (response.error) {
