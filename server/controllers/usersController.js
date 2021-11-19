@@ -26,7 +26,7 @@ const create = async (req, res) => {
     return res.status(code).json({ error });
   }
 
-  res.status(200).json(response);
+  res.status(200).json({ message: 'Usuário criado com sucesso.' });
 };
 
 module.exports = { login, create };

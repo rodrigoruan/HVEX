@@ -28,7 +28,7 @@ const login = async (email, password) => {
 };
 
 const create = async (email, name, password) => {
-  const error = { code: 409, error: 'Email em uso' };
+  const error = { code: 409, error: 'Email já utilizado' };
 
   const emailAlreadyRegistered = await models.findUserByEmail(email);
 
