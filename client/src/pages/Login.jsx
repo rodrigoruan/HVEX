@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect, Link } from 'react-router-dom'
 
 import loginUser from '../services/loginUser'
 
@@ -10,6 +11,10 @@ function Login () {
   const [email, setEmail] = React.useState('')
   const [password, setPassword] = React.useState('')
   const [error, setError] = React.useState(null)
+  const [redirect, setRedirect] = React.useState(false)
+
+  const localUser = localStorage.getItem('user_logged')
+  if (redirect || localUser) return <Redirect to="/home" />
 
   return (
     <div className="login">
@@ -35,12 +40,13 @@ function Login () {
         )}
 
         <button
-          onClick={() => loginUser(email, password, setError)}
+          onClick={() => loginUser(email, password, setError, setRedirect)}
           type="button"
         >
           LOGIN
         </button>
-        <button>REGISTRAR</button>
+
+        <Link to="/register">REGISTRAR</Link>
       </section>
     </div>
   )

@@ -28,18 +28,23 @@
   padding: 10px 10px;
   width: 19.4rem;
   border: none;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   font-weight: 500;
   color: #fff;
-}
-
-.login-container > button:first-of-type {
-  background-color: #10486d;
-  margin-top: 1rem;
-}
-
-.login-container > button:last-of-type {
   background-color: #1b1b1b;
+  font-size: 0.875rem;
+}
+
+.login-container > a {
+  padding: 9px 0;
+  width: 19.4rem;
+  border: none;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  background-color: #10486d;
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
 }
 
 .login-container__error {

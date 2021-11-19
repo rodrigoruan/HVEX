@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const loginUser = (email, password, setError) => {
+const loginUser = (email, password, setError, setRedirect) => {
   axios
     .post('http://localhost:5000/login', {
       email,
@@ -8,7 +8,8 @@ const loginUser = (email, password, setError) => {
     })
     .then((response) => {
       setError(false)
-      console.log(response)
+      setRedirect(true)
+      localStorage.setItem('user_logged', response.data.name)
     })
     .catch(() => {
       setError(true)

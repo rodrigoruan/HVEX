@@ -1,0 +1,46 @@
+.register-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.register-container__form {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.register-container h1 {
+  color: #252525;
+}
+
+.register-container img {
+  width: 30px;
+  margin: 2rem 0 0 1rem;
+}
+
+.register-container input {
+  display: block;
+  padding: 10px 10px;
+  margin: 0 auto;
+  width: 18rem;
+  margin-top: 0.5rem;
+  outline: none;
+  border: 1px solid #b6b6b6;
+  text-align: center;
+}
+
+.register-container > input:first-of-type {
+  margin-top: 2rem;
+}
+
+.register-container button {
+  padding: 10px 0;
+  width: 19.3rem;
+  display: block;
+  border: none;
+  margin: 2rem auto 0 auto;
+  font-weight: 500;
+  background-color: #10486d;
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
+}
