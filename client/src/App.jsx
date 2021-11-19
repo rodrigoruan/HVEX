@@ -1,18 +1,18 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Login from './pages/Login';
+import Login from './pages/Login'
 
-import './css/App.css';
+import './css/App.css'
 
 const App = () => {
-	return (
-		<BrowserRouter>
-			<Switch>
-				<Route path="/" component={Login} />
-			</Switch>
-		</BrowserRouter>
-	);
-};
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Login} />
+      </Switch>
+    </BrowserRouter>
+  )
+}
 
-export default App;
+export default App
