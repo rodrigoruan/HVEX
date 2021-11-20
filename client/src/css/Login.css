@@ -22,20 +22,34 @@ button {
   width: 300px;
   padding: 10px;
   border: 1px solid #b6b6b6;
+  outline: none;
+}
+
+.login-container__form p {
+  color: rgb(218, 25, 25);
+  margin-top: 0.5rem;
 }
 
 .login-container__form button,
-.login-container__register button {
+.login-container__register a {
   width: 300px;
   padding: 8px;
   color: #fff;
   border: none;
+  font-size: 0.875rem;
 }
 
 .login-container__form button {
   background-color: #10486d;
+  margin-top: 1.5rem;
 }
 
-.login-container__register button {
+.login-container__register {
+  margin-top: 0.5rem;
+}
+
+.login-container__register a {
   background-color: #1b1b1b;
+  display: block;
+  margin: 0 auto;
 }
