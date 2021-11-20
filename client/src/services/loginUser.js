@@ -1,10 +1,11 @@
 import axios from 'axios'
 
+import errorMessages from '../validations/errorMessages'
 import { isValidEmail, isValidPassword } from '../validations/validations'
 
 const loginUser = (email, password, setError, setRedirect) => {
   if (!isValidEmail(email) || !isValidPassword(password)) {
-    return setError('Email ou senha no formato incorreto')
+    return setError(errorMessages.loginDefault)
   }
 
   axios

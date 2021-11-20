@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+import errorMessages from '../validations/errorMessages'
 import {
   isValidEmail,
   isValidName,
@@ -7,17 +8,11 @@ import {
 } from '../validations/validations'
 
 const createUser = (name, email, password, setError, setRedirect) => {
-  if (!isValidName(name)) {
-    return setError('Por favor, digite um nome válido')
-  }
+  if (!isValidName(name)) return setError(errorMessages.name)
 
-  if (!isValidEmail(email)) {
-    return setError('Email inválido')
-  }
+  if (!isValidEmail(email)) return setError(errorMessages.email)
 
-  if (!isValidPassword(password)) {
-    return setError('A senha precisa conter entre 6 e 20 caracteres')
-  }
+  if (!isValidPassword(password)) return setError(errorMessages.password)
 
   axios
     .post('http://localhost:5000/create', {
