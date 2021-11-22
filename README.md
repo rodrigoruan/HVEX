@@ -13,6 +13,7 @@
 <h2>Instruções para rodar a aplicação</h2>
 
 <p>OBS: para executar o projeto é necessário ter um servidor MySQL instalado e rodando</p>
+<a href="https://www.mysql.com/products/workbench/">Baixar MySQL aqui</a>
 
 1° Clone o repositório a partir de seu terminal:
 ```bash
