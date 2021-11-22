@@ -16,7 +16,7 @@
 
 1° Clone o repositório a partir de seu terminal:
 ```bash
-$ git clone git@github.com:rodrigoruan/HVEX.git
+  git clone git@github.com:rodrigoruan/HVEX.git
 ```
 
 2° Acesse seu MySQL e rode o código do arquivo createdb.sql
@@ -28,12 +28,12 @@ $ git clone git@github.com:rodrigoruan/HVEX.git
 
 4° Instale as dependencias na pasta server e inicie a aplicação:
 ```bash
-$ cd server && npm install && npm start
+  cd server && npm install && npm start
 ```
 
 5° Acesse a pasta client e instale as dependencias:
 ```bash
-$ cd client && npm install && npm start
+  cd client && npm install && npm start
 ```
 
 <h2>Bibliotecas / Linguagens</h2>
