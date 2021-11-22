@@ -16,15 +16,17 @@
 
 <a href="https://www.mysql.com/products/workbench/">Baixar MySQL aqui</a>
 
-<p>1° Clone o repositório a partir de seu terminal:</p>
+<br />
+
+1° Clone o repositório a partir de seu terminal:
 ```bash
   git clone git@github.com:rodrigoruan/HVEX.git
 ```
 
-<p>2° Acesse seu MySQL e rode o código do arquivo createdb.sql</p>
+2° Acesse seu MySQL e rode o código do arquivo createdb.sql
 <img src="https://i.ibb.co/CbKzrL5/BD.png" alt="BD" border="0">
 
-<p>3° Acesse a pasta server e renomeie o arquivo '.env.dev' para '.env', coloque suas informações do MySQL (host, user, password e database).</p>
+3° Acesse a pasta server e renomeie o arquivo '.env.dev' para '.env', coloque suas informações do MySQL (host, user, password e database).
 ex:
 ```bash
 host=localhost // host no MySQL
@@ -36,12 +38,12 @@ SECRET=HVEXSECRET // SECRET para o JWT (FIXO)
 
 <img src="https://i.ibb.co/jVj14JT/envfile.png" alt="envfile" border="0">
 
-<p>Instale as dependencias na pasta server e inicie a aplicação:</p>
+Instale as dependencias na pasta server e inicie a aplicação:
 ```bash
   cd server && npm install && npm start
 ```
 
-<p>5° Acesse a pasta client e instale as dependencias:</p>
+5° Acesse a pasta client e instale as dependencias:
 ```bash
   cd client && npm install && npm start
 ```
