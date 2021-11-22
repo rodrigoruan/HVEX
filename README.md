@@ -15,6 +15,8 @@
 
 <h2>Instruções para rodar a aplicação</h2>
 
+![Alt Text](https://media.giphy.com/media/6sz6gqNWhmXYtkeO3Q/giphy.gif)
+
 <p>OBS: para executar o projeto é necessário ter um servidor MySQL instalado e rodando</p>
 
 <a href="https://www.mysql.com/products/workbench/">Baixar MySQL aqui</a>
