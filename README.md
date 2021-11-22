@@ -23,6 +23,14 @@
 <img src="https://i.ibb.co/CbKzrL5/BD.png" alt="BD" border="0">
 
 3° Acesse a pasta server e renomeie o arquivo '.env.dev' para '.env', coloque suas informações do MySQL (host, user, password e database).
+ex:
+```bash
+host=localhost // host no MySQL
+user=root // usuário no MySQL  
+password=password // Senha no MySQl
+database=HVEX   // Banco de dados criado no 2° passo
+SECRET=HVEXSECRET // SECRET para o JWT (FIXO)
+```
 
 <img src="https://i.ibb.co/jVj14JT/envfile.png" alt="envfile" border="0">
 
