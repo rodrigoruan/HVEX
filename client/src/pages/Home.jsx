@@ -1,32 +1,32 @@
-import React from 'react'
-import axios from 'axios'
-import { Redirect } from 'react-router-dom'
+import React from 'react';
+import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
-import Header from '../components/Header'
-import UserCard from '../components/UserCard'
+import Header from '../components/Header';
+import UserCard from '../components/UserCard';
 
-import '../css/Home.css'
+import '../css/Home.css';
 
 function Home () {
-  const [input, setInput] = React.useState('')
-  const [user, setUser] = React.useState('')
-  const [data, setData] = React.useState([])
+  const [input, setInput] = React.useState('');
+  const [user, setUser] = React.useState('');
+  const [data, setData] = React.useState([]);
 
-  const [redirect, setRedirect] = React.useState(false)
+  const [redirect, setRedirect] = React.useState(false);
 
   React.useEffect(() => {
-    const username = localStorage.getItem('user_logged')
-    if (!username) return setRedirect(true)
-    setUser(username)
-  }, [])
+    const username = localStorage.getItem('user_logged');
+    if (!username) return setRedirect(true);
+    setUser(username);
+  }, []);
 
   const getUserByEmailOrUsername = () => {
     axios
       .get(`https://api.github.com/search/users?q=${input}`)
-      .then(({ data }) => setData(data.items))
-  }
+      .then(({ data }) => setData(data.items));
+  };
 
-  if (redirect) return <Redirect to="/" />
+  if (redirect) return <Redirect to="/" />;
 
   return (
     <div className="home">
@@ -46,7 +46,9 @@ function Home () {
               placeholder="Digite o nome do usuário ou e-mail"
             />
           </label>
-          <button onClick={getUserByEmailOrUsername}>BUSCAR</button>
+          <button type="button" onClick={getUserByEmailOrUsername}>
+            BUSCAR
+          </button>
         </section>
 
         <section>
@@ -56,7 +58,7 @@ function Home () {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

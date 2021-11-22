@@ -63,7 +63,7 @@ function Login () {
 
           {error && <p className="login-error">{error}</p>}
 
-          <button>LOGIN</button>
+          <button type="button">LOGIN</button>
         </form>
 
         <Link className="login-register" to="/register">

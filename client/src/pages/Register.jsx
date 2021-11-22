@@ -69,7 +69,7 @@ function Register () {
 
           {error && <p className="register-error">{error}</p>}
 
-          <button>CADASTRAR</button>
+          <button type="button">CADASTRAR</button>
         </form>
       </main>
     </div>
