@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.header img {
+  width: 180px;
+}
+
+.header-logout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-logout button {
+  width: 60px;
+  background-color: #10486d;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  margin: 0;
+  padding: 3px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.header-logout button:hover {
+  background-color: #252525;
+  transition: 0.5s;
+}
+
+.header-logout p {
+  font-size: 1rem;
+  text-transform: capitalize;
+}

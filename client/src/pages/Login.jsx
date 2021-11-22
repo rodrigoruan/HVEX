@@ -1,7 +1,6 @@
 import React from 'react'
+import axios from 'axios'
 import { Link, Redirect } from 'react-router-dom'
-
-import loginUser from '../services/loginUser'
 
 import HVEXLOGO from '../imgs/logo.svg'
 
@@ -10,51 +9,66 @@ import '../css/Login.css'
 function Login () {
   const [email, setEmail] = React.useState('')
   const [password, setPassword] = React.useState('')
-  const [error, setError] = React.useState('')
   const [redirect, setRedirect] = React.useState(false)
+  const [error, setError] = React.useState('')
 
-  const userLogged = localStorage.getItem('is_logged')
-  if (userLogged || redirect) return <Redirect to="/home" />
+  React.useEffect(() => {
+    const username = localStorage.getItem('user_logged')
+    if (username) setRedirect(true)
+  }, [])
+
+  const fetchApiAndLoginUser = (e) => {
+    e.preventDefault()
+    axios
+      .post('http://localhost:5000/login', {
+        email,
+        password
+      })
+      .then(({ data }) => {
+        setRedirect(true)
+        localStorage.setItem('user_logged', data.name)
+      })
+      .catch(() => setError('Usuário ou senha incorretos'))
+  }
+
+  if (redirect) return <Redirect to="/home" />
 
   return (
-    <div className="login-container">
-      <main className="login-container__main">
+    <div className="login">
+      <main className="login-main">
         <div>
-          <img src={HVEXLOGO} />
+          <img src={HVEXLOGO} alt="HVEX logo" />
         </div>
 
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="login-container__form"
-        >
-          <input
-            value={email}
-            type="email"
-            onChange={({ target }) => setEmail(target.value)}
-            placeholder="Email"
-            required
-          />
+        <form onSubmit={fetchApiAndLoginUser} className="login-form">
+          <label>
+            <input
+              value={email}
+              onChange={({ target }) => setEmail(target.value)}
+              type="email"
+              placeholder="Email"
+              required
+            />
+          </label>
 
-          <input
-            value={password}
-            onChange={({ target }) => setPassword(target.value)}
-            type="password"
-            placeholder="Senha"
-            required
-          />
+          <label>
+            <input
+              value={password}
+              onChange={({ target }) => setPassword(target.value)}
+              type="password"
+              placeholder="Senha"
+              required
+            />
+          </label>
 
-          {error && <p>{error}</p>}
+          {error && <p className="login-error">{error}</p>}
 
-          <button
-            onClick={() => loginUser(email, password, setError, setRedirect)}
-          >
-            Entrar
-          </button>
+          <button>LOGIN</button>
         </form>
 
-        <div className="login-container__register">
-          <Link to="/register">Registrar</Link>
-        </div>
+        <Link className="login-register" to="/register">
+          REGISTRAR
+        </Link>
       </main>
     </div>
   )
