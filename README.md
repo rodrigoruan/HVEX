@@ -1,6 +1,9 @@
 <h1>Github Search - HVEX</h1>
+
 <p>Neste projeto foi realizado o desenvolvimento de uma aplicação para consulta de usuários a partir da API do Github.</p>
 <p>A aplicação tem o intuito de procurar usuários do Github a partir de seus respectivos nomes / email, além de permitir o usuário se cadastrar e fazer login.</p>
+
+![Alt Text](https://media.giphy.com/media/KwITd5nES1vS15cA7A/giphy.gif)
 
 <h2>Funcionalidades</h2>
 
