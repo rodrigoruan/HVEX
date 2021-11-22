@@ -5,7 +5,7 @@
 
 ![Alt Text](https://media.giphy.com/media/KwITd5nES1vS15cA7A/giphy.gif)
 
-<h2>Funcionalidades</h2>
+<h2>⚙️ Funcionalidades</h2>
 
 <ul>
   <li>Cadastrar um novo usuário no banco de dados</li>
@@ -13,7 +13,7 @@
   <li>Pesquisar usuários pelo seu nome / email do Github</li>
 </ul>
 
-<h2>Instruções para rodar a aplicação</h2>
+<h2>🔧 Instruções para rodar a aplicação</h2>
 
 ![Alt Text](https://media.giphy.com/media/6sz6gqNWhmXYtkeO3Q/giphy.gif)
 
@@ -53,7 +53,7 @@ SECRET=HVEXSECRET // SECRET para o JWT (FIXO)
   cd client && npm install && npm start
 ```
 
-<h2>Bibliotecas / Linguagens</h2>
+<h2>🛠️ Bibliotecas / Linguagens</h2>
 
  * [React](https://pt-br.reactjs.org/) - O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
  * [axios](https://axios-http.com/docs/intro) - Axios é um cliente HTTP baseado-em-promessas para o node. js e para o navegador.
