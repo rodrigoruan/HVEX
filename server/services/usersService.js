@@ -20,7 +20,7 @@ const login = async (email, password) => {
     return error;
   }
 
-  const { name } = await models.login(email, password);
+  const { name } = await models.findUserByEmail(email);
 
   const token = jwt.sign({ data: { name, email } }, SECRET);
 

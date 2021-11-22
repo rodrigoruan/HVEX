@@ -1,37 +1,37 @@
-import React from 'react'
-import axios from 'axios'
-import { Link, Redirect } from 'react-router-dom'
+import React from 'react';
+import axios from 'axios';
+import { Link, Redirect } from 'react-router-dom';
 
-import HVEXLOGO from '../imgs/logo.svg'
+import HVEXLOGO from '../imgs/logo.svg';
 
-import '../css/Login.css'
+import '../css/Login.css';
 
 function Login () {
-  const [email, setEmail] = React.useState('')
-  const [password, setPassword] = React.useState('')
-  const [redirect, setRedirect] = React.useState(false)
-  const [error, setError] = React.useState('')
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [redirect, setRedirect] = React.useState(false);
+  const [error, setError] = React.useState('');
 
   React.useEffect(() => {
-    const username = localStorage.getItem('user_logged')
-    if (username) setRedirect(true)
-  }, [])
+    const username = localStorage.getItem('user_logged');
+    if (username) setRedirect(true);
+  }, []);
 
   const fetchApiAndLoginUser = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     axios
       .post('http://localhost:5000/login', {
         email,
         password
       })
       .then(({ data }) => {
-        setRedirect(true)
-        localStorage.setItem('user_logged', data.name)
+        setRedirect(true);
+        localStorage.setItem('user_logged', data.name);
       })
-      .catch(() => setError('Usuário ou senha incorretos'))
-  }
+      .catch(() => setError('Usuário ou senha incorretos'));
+  };
 
-  if (redirect) return <Redirect to="/home" />
+  if (redirect) return <Redirect to="/home" />;
 
   return (
     <div className="login">
@@ -63,7 +63,9 @@ function Login () {
 
           {error && <p className="login-error">{error}</p>}
 
-          <button type="button">LOGIN</button>
+          <button onClick={fetchApiAndLoginUser} type="button">
+            LOGIN
+          </button>
         </form>
 
         <Link className="login-register" to="/register">
@@ -71,7 +73,7 @@ function Login () {
         </Link>
       </main>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

@@ -9,15 +9,6 @@ const findUserByEmail = async (email) => {
   return user[0];
 };
 
-const login = async (email) => {
-  const [user] = await connection.execute(
-    'SELECT name, email FROM users WHERE email = ?',
-    [email],
-  );
-
-  return user[0];
-};
-
 const create = async (email, name, password) => {
   const [user] = await connection.execute(
     'INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
@@ -27,4 +18,4 @@ const create = async (email, name, password) => {
   return user;
 };
 
-module.exports = { login, create, findUserByEmail };
+module.exports = { create, findUserByEmail };
