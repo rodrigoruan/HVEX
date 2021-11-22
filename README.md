@@ -14,7 +14,7 @@
 
 <p>OBS: para executar o projeto é necessário ter um servidor MySQL instalado e rodando</p>
 
-<a href="https://www.mysql.com/products/workbench/">Baixar MySQL aqui</a>
+<a href="https://www.mysql.com/products/workbench/" target="_blank">Baixar MySQL aqui</a>
 
 <br />
 
