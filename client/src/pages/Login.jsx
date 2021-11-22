@@ -63,9 +63,7 @@ function Login () {
 
           {error && <p className="login-error">{error}</p>}
 
-          <button onClick={fetchApiAndLoginUser} type="button">
-            LOGIN
-          </button>
+          <button type="submit">LOGIN</button>
         </form>
 
         <Link className="login-register" to="/register">
