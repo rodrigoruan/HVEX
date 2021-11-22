@@ -1,31 +1,31 @@
-import React from 'react'
-import axios from 'axios'
-import { Redirect, Link } from 'react-router-dom'
+import React from 'react';
+import axios from 'axios';
+import { Redirect, Link } from 'react-router-dom';
 
-import HVEXLOGO from '../imgs/logo.svg'
+import HVEXLOGO from '../imgs/logo.svg';
 
-import '../css/Register.css'
+import '../css/Register.css';
 
 function Register () {
-  const [name, setName] = React.useState('')
-  const [email, setEmail] = React.useState('')
-  const [password, setPassword] = React.useState('')
-  const [redirect, setRedirect] = React.useState(false)
-  const [error, setError] = React.useState('')
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [redirect, setRedirect] = React.useState(false);
+  const [error, setError] = React.useState('');
 
-  const fetchApiAndLoginUser = (e) => {
-    e.preventDefault()
+  const fetchApiAndLoginUser = (event) => {
+    event.preventDefault();
     axios
       .post('http://localhost:5000/create', {
-        name,
         email,
+        name,
         password
       })
       .then(() => setRedirect(true))
-      .catch(() => setError('Email já está sendo utilizado'))
-  }
+      .catch(() => setError('Email já está sendo utilizado'));
+  };
 
-  if (redirect) return <Redirect to="/" />
+  if (redirect) return <Redirect to="/" />;
 
   return (
     <div className="register">
@@ -73,7 +73,7 @@ function Register () {
         </form>
       </main>
     </div>
-  )
+  );
 }
 
-export default Register
+export default Register;

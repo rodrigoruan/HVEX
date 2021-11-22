@@ -46,5 +46,5 @@ function UserCard ({ userURL }) {
 export default UserCard
 
 UserCard.propTypes = {
-  userURL: PropTypes.string.isRequired
+  'userURL': PropTypes.string.isRequired
 }

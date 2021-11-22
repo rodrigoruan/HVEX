@@ -25,5 +25,5 @@ function Header ({ changeRedirect }) {
 export default Header
 
 Header.propTypes = {
-  changeRedirect: PropTypes.func.isRequired
+  'changeRedirect': PropTypes.func.isRequired
 }

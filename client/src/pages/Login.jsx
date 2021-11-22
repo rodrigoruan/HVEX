@@ -17,8 +17,8 @@ function Login () {
     if (username) setRedirect(true)
   }, [])
 
-  const fetchApiAndLoginUser = (e) => {
-    e.preventDefault()
+  const fetchApiAndLoginUser = (event) => {
+    event.preventDefault()
     axios
       .post('http://localhost:5000/login', {
         email,
