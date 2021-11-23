@@ -15,11 +15,13 @@
 
 <h2>🔧 Instruções para rodar a aplicação</h2>
 
+<p>Gif demonstrando como rodar a aplicação:</p>
+
 ![Alt Text](https://media.giphy.com/media/6sz6gqNWhmXYtkeO3Q/giphy.gif)
 
-<p>OBS: para executar o projeto é necessário ter um servidor MySQL instalado e rodando</p>
+<p><strong>OBS: para executar o projeto é necessário ter um servidor MySQL instalado e rodando</strong></p>
 
-<a href="https://www.mysql.com/products/workbench/">Baixar MySQL aqui</a>
+<a href="https://www.mysql.com/products/workbench/">Download MySQL</a>
 
 <br />
 
@@ -29,6 +31,7 @@
 ```
 
 2° Acesse seu MySQL e rode o código do arquivo createdb.sql
+
 <img src="https://i.ibb.co/CbKzrL5/BD.png" alt="BD" border="0">
 
 3° Acesse a pasta server e renomeie o arquivo '.env.dev' para '.env', coloque suas informações do MySQL (host, user, password e database).
@@ -73,5 +76,4 @@ SECRET=HVEXSECRET // SECRET para o JWT (FIXO)
 
 <h2>Contato</h2>
 
-<p><a href="https://www.linkedin.com/in/rodrigo-ruan/">Linkedin</a></p>
-<p><a href="mailto:rodrigopython16@gmail.com">Gmail</a></p>
+<a href="https://www.linkedin.com/in/rodrigo-ruan/">Linkedin</a> | <a href="mailto:rodrigopython16@gmail.com">Gmail</a>
