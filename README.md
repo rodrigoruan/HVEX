@@ -5,7 +5,7 @@
 
 ![Alt Text](https://media.giphy.com/media/KwITd5nES1vS15cA7A/giphy.gif)
 
-<h2>Funcionalidades</h2>
+<h2>⚙️ Funcionalidades</h2>
 
 <ul>
   <li>Cadastrar um novo usuário no banco de dados</li>
@@ -13,7 +13,7 @@
   <li>Pesquisar usuários pelo seu nome / email do Github</li>
 </ul>
 
-<h2>Instruções para rodar a aplicação</h2>
+<h2>🔧 Instruções para rodar a aplicação</h2>
 
 ![Alt Text](https://media.giphy.com/media/6sz6gqNWhmXYtkeO3Q/giphy.gif)
 
@@ -43,7 +43,7 @@ SECRET=HVEXSECRET // SECRET para o JWT (FIXO)
 
 <img src="https://i.ibb.co/jVj14JT/envfile.png" alt="envfile" border="0">
 
-Instale as dependencias na pasta server e inicie a aplicação:
+4° Instale as dependencias na pasta server e inicie a aplicação:
 ```bash
   cd server && npm install && npm start
 ```
@@ -53,32 +53,23 @@ Instale as dependencias na pasta server e inicie a aplicação:
   cd client && npm install && npm start
 ```
 
-<h2>Bibliotecas / Linguagens</h2>
+<h2>🛠️ Bibliotecas / Linguagens</h2>
 
-<ul>
-  <li><a href="https://pt-br.reactjs.org/">React</a></li>
-   <ul>
-      <li><a href="https://www.npmjs.com/package/react-jwt">react-jwt</a></li>
-      <li><a href="https://axios-http.com/docs/intro">axios</a></li>
-      <li><a href="https://v5.reactrouter.com/web/guides/quick-start">react-router-dom</a></li>
-      <li><a href="https://www.npmjs.com/package/react-loading">react-loading</a></li>
-      <li><a href="https://eslint.org/">eslint</a></li>
-      <li><a href="https://stylelint.io/">stylelint</a></li>
-  </ul>
-</ul>
-  
-<ul>
-  <li><a href="https://www.mysql.com/">MySQL</a></li>
-  <li><a href="https://nodejs.org/en/">Node</a></li>
-    <ul>
-      <li><a href="https://www.npmjs.com/package/dotenv">dotenv</a></li>
-      <li><a href="https://www.npmjs.com/package/cors">cors</a></li>
-      <li><a href="https://expressjs.com/pt-br/">express</a></li>
-      <li><a href="https://www.npmjs.com/package/jsonwebtoken">jsonwebtoken</a></li>
-      <li><a href="https://www.npmjs.com/package/bcrypt">bcrypt</a></li>
-      <li><a href="https://www.npmjs.com/package/joi">Joi</a></li>
-    </ul>
-</ul>
+ * [React](https://pt-br.reactjs.org/) - O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+ * [axios](https://axios-http.com/docs/intro) - Axios é um cliente HTTP baseado-em-promessas para o node. js e para o navegador.
+ * [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start) - O React Router é uma lib completa para controle de rotas.
+ * [react-loading](https://www.npmjs.com/package/react-loading) - O React-Loading é uma lib com componentes de loading para o React.
+ * [eslint](https://eslint.org/) - ESLint é uma ferramenta de análise de código estática para identificar padrões problemáticos encontrados no código JavaScript.
+ * [stylelint](https://stylelint.io/) - O StyleLint funciona analisando o seu CSS e avisando se alguma regra configurada for violada.
+ 
+ * [MySQL](https://www.mysql.com/) - O MySQL é um sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface.
+ * [Node](https://nodejs.org/en/) - Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.
+ * [dotenv](https://www.npmjs.com/package/dotenv) - Carrega variáveis de ambiente de um arquivo `.env` em `process.env`
+ * [cors](https://www.npmjs.com/package/cors) - CORS - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um mecanismo que usa cabeçalhos adicionais HTTP para informar a um navegador que permita que um aplicativo Web seja executado em uma origem (domínio) com permissão.
+ * [express](https://expressjs.com/pt-br/) - Express.js é um framework para Node.js que fornece recursos mínimos para construção de servidores web.
+ * [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) - JWT (JSON Web Token) é um método padrão da indústria para realizar autenticação entre duas partes por meio de um token assinado que autentica uma requisição web.
+ * [bcrypt](https://www.npmjs.com/package/bcrypt) - bcrypt é um método de criptografia do tipo hash para senhas baseado no Blowfish.
+ * [Joi](https://www.npmjs.com/package/joi) - O Joi usa uma linguagem descritiva para criar schemas de validação.
 
 <h2>Contato</h2>
 
