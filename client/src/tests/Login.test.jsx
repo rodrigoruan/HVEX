@@ -12,9 +12,9 @@ it('Renderiza a page Login corretamente', () => {
   expect(registerButton).toBeTruthy();
   expect(loginButton).toBeTruthy();
 
-  expect(history.location.pathname).toBe('/')
+  expect(history.location.pathname).toBe('/');
 
-  fireEvent.click(registerButton)
+  fireEvent.click(registerButton);
 
-  expect(history.location.pathname).toBe('/register')
+  expect(history.location.pathname).toBe('/register');
 });

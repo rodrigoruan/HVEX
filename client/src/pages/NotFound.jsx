@@ -8,12 +8,12 @@ import '../css/NotFound.css';
 
 function NotFound () {
   return (
-    <div className="notfound">
+    <main className="notfound">
       <img src={HVEXLOGO} alt="HVEX LOGO" />
       <img src={NOTFOUNDICON} alt="Página não encontrada" />
       <h1>Página não encontrada</h1>
       <Link to="/">Retornar</Link>
-    </div>
+    </main>
   );
 }
 

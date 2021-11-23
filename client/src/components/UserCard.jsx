@@ -1,25 +1,25 @@
-import React from 'react'
-import axios from 'axios'
-import ReactLoading from 'react-loading'
-import PropTypes from 'prop-types'
+import React from 'react';
+import axios from 'axios';
+import ReactLoading from 'react-loading';
+import PropTypes from 'prop-types';
 
-import '../css/UserCard.css'
+import '../css/UserCard.css';
 
 function UserCard ({ userURL }) {
-  const [user, setUser] = React.useState(null)
+  const [user, setUser] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(userURL).then(({ data }) => setUser(data))
-  }, [])
+    axios.get(userURL).then(({ data }) => setUser(data));
+  }, []);
 
-  if (!user) return <ReactLoading type="cubes" color="10486D" />
+  if (!user) return <ReactLoading type="cubes" color="10486D" />;
 
   return (
     <div className="card">
-      <div className="card-img-container">
+      <section className="card-img-container">
         <img src={user.avatar_url} alt="Foto do Usuário" />
-      </div>
-      <div className="card-info-container">
+      </section>
+      <section className="card-info-container">
         <div className="card-user">
           <p>{user.login}</p>
           <p>{`${user.public_repos} Repo. Públicos`}</p>
@@ -38,13 +38,13 @@ function UserCard ({ userURL }) {
         <a href={user.html_url} target="_blank" rel="noreferrer">
           Acessar perfil
         </a>
-      </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default UserCard
+export default UserCard;
 
 UserCard.propTypes = {
   'userURL': PropTypes.string.isRequired
-}
+};

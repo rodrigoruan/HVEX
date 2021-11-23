@@ -1,6 +1,6 @@
 const connection = require('./connection');
 
-const findUserByEmail = async (email) => {
+const findByEmail = async (email) => {
   const [user] = await connection.execute(
     'SELECT * FROM users WHERE email = ?',
     [email],
@@ -18,4 +18,4 @@ const create = async (email, name, password) => {
   return user;
 };
 
-module.exports = { create, findUserByEmail };
+module.exports = { create, findByEmail };

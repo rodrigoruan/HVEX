@@ -36,9 +36,9 @@ function Login () {
   return (
     <div className="login">
       <main className="login-main">
-        <div>
+        <section>
           <img src={HVEXLOGO} alt="HVEX logo" />
-        </div>
+        </section>
 
         <form onSubmit={fetchApiAndLoginUser} className="login-form">
           <label>

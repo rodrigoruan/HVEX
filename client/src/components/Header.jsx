@@ -15,11 +15,11 @@ function Header ({ changeRedirect }) {
     <header className="header">
       <img src={HVEXLOGO} alt="HVEX LOGO" />
 
-      <div className="header-logout">
+      <section className="header-logout">
         <button type="button" onClick={logoutUser}>
           Sair
         </button>
-      </div>
+      </section>
     </header>
   );
 }

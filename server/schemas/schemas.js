@@ -15,16 +15,12 @@ const errorMessages = {
 };
 
 const schemaCreateUser = Joi.object({
-  name: Joi.string()
-    .min(2)
-    .required()
-    .label(errorMessages.name),
+  name: Joi.string().min(2).required().label(errorMessages.name),
   email: Joi.string()
     .regex(emailPattern)
     .required()
     .label(errorMessages.email.create),
-  password: Joi
-    .string()
+  password: Joi.string()
     .min(6)
     .max(20)
     .required()
@@ -32,16 +28,11 @@ const schemaCreateUser = Joi.object({
 });
 
 const schemaLoginUser = Joi.object({
-  email: Joi
-    .string()
+  email: Joi.string()
     .regex(emailPattern)
     .required()
     .label(errorMessages.email.login),
-  password: Joi
-    .string()
-    .min(6)
-    .required()
-    .label(errorMessages.password.login),
+  password: Joi.string().min(6).required().label(errorMessages.password.login),
 });
 
 module.exports = {
