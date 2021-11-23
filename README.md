@@ -38,7 +38,7 @@
 exemplo de configuração:
 ```bash
 host=localhost      // host no MySQL
-user=root           //  usuário no MySQL
+user=root           // usuário no MySQL
 password=password   // Senha no MySQl
 database=HVEX       // Banco de dados criado no 2° passo
 SECRET=HVEXSECRET   // SECRET para o JWT (FIXO)
