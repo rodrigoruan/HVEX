@@ -1,0 +1,31 @@
+.notfound {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.notfound img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.notfound img:first-of-type {
+  width: 250px;
+}
+
+.notfound h1 {
+  color: #10486d;
+}
+
+.notfound a {
+  background-color: #10486d;
+  color: #fff;
+  width: 150px;
+  padding: 5px 0;
+  display: block;
+  margin: 2rem auto 0;
+  border-radius: 2px;
+}
