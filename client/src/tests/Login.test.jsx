@@ -3,7 +3,7 @@ import { screen, fireEvent } from '@testing-library/react';
 import renderWithRouter from './renderWithRouter';
 import Login from '../pages/Login';
 
-it('Renderiza o componente Login corretamente', () => {
+it('Renderiza a page Login corretamente', () => {
   const { history } = renderWithRouter(<Login />);
 
   const registerButton = screen.getByText(/REGISTRAR/u);
